@@ -22,4 +22,10 @@ export class SearchService {
             )
     }
 
+    getCountry(name: string): Observable<any> {
+
+        return this.http.get<any>(`https://restcountries.eu/rest/v2/name/${name}`)
+            .map(response => response)
+    }
+
 }
