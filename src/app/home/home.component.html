@@ -1,0 +1,28 @@
+<div class="search_block">
+    <div class="search_input">
+        <h1>Search the country</h1>
+        <mat-form-field>
+            <input matInput placeholder="Country name" [(ngModel)]="searchStr" (ngModelChange)="handleChange()">
+            <mat-error>
+
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div *ngIf="isLoaded">
+        <mat-card class="card" *ngFor="let countr of country">
+            <mat-card-header>
+                <mat-card-title>{{ countr.name }}</mat-card-title>
+                <mat-card-subtitle>Capital: {{ countr.capital }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="{{ countr.flag }}" alt="Flag of {{ countr.name }}" class="flag">
+            </mat-card-content>
+            <mat-card-actions class="center">
+                <a mat-raised-button color="primary" href="/details?name={{ countr.name }}">View Details</a>
+                <!-- <a href="/details?name={{ countr.name }}">Crisis Center</a> -->
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

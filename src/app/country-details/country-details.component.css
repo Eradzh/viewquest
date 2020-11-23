@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+img {
+    width: 250px;
+    margin: 10px auto;
+}
+
+.detailsList {
+    width: 300px;
+    margin: auto;
+}

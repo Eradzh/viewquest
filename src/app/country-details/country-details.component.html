@@ -1,0 +1,11 @@
+<header>
+    <img src='{{ country[0]["flag"] }}'>
+    <h1>{{ country[0]["name"] }}</h1>
+</header>
+
+<mat-list role="list" *ngFor="let countr of country" class="detailsList">
+    <mat-list-item role="listitem">Capital: {{ countr.capital}}</mat-list-item>
+    <mat-list-item role="listitem">Region: {{ countr.region}}</mat-list-item>
+    <mat-list-item role="listitem">Demonym: {{ countr.demonym}}</mat-list-item>
+    <mat-list-item role="listitem">Native Name: {{ countr.nativeName}}</mat-list-item>
+</mat-list>
